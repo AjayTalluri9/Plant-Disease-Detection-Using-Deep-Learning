@@ -10,7 +10,14 @@ The model utilizes a **custom dataset** composed of various images of plant leav
 
 ### Key Features:
 - **38 plant disease classes**: Including both healthy and infected leaves across various species.
-- **Data Augmentation**: Techniques like rotation, flipping, and zooming were applied during training to prevent overfitting and improve generalization.
+- **Data Augmentation**: Techniques like rotation, flipping, and zooming were applied during training to prevent overfitting and improve generalization
+
+<img width="533" alt="Screenshot 2025-05-05 at 2 17 27 PM" src="https://github.com/user-attachments/assets/20530565-3acc-4c68-8209-2c0d491702cb" />
+
+This image shows an example of the plant disease dataset used for training the model. The dataset contains images of leaves from various plants with diseases like rust, blight, and others, each labeled with the corresponding plant species and disease.
+
+
+
 
 ## Model Architecture: ResNet9
 
@@ -20,6 +27,10 @@ The model used in this project is a **ResNet9** architecture, a smaller and more
 - **Convolutional Layers**: Several layers that extract features from images, including edge detection, texture analysis, and lesion identification.
 - **Residual Blocks**: These layers help the model retain important feature information, aiding in the detection of subtle plant disease patterns.
 - **Fully Connected Layers**: After feature extraction, the model flattens the outputs and applies a fully connected layer to classify the image into one of 38 classes (healthy or specific diseases).
+
+<img width="386" alt="Screenshot 2025-05-05 at 2 20 14 PM" src="https://github.com/user-attachments/assets/02f97240-5ea3-4ed2-b2b5-7e6a754d4733" />
+
+This figure illustrates how the code classifies plant leaf images into different disease patterns. It shows how the convolutional layers detect specific features such as color changes and lesions on the leaf, which are essential for distinguishing between healthy and diseased plants.
 
 ### Code Details:
 ```python
@@ -107,6 +118,18 @@ This will start the server on http://127.0.0.1:5000/.
 
 ## 5. Access the Web Interface
 Open your browser and go to http://127.0.0.1:5000/. From there, you can upload a leaf image and see the disease prediction result.
+
+# Results
+The proposed deep learning-based approach for plant disease detection has shown considerable promise in improving the identification of agricultural diseases. Utilizing convolutional neural networks (CNNs) and transfer learning techniques, the model achieved a high classification accuracy of 85%, complemented by robust precision (90.9%), recall (83.3%), and an F1-score of 87%. Its efficiency is underscored by an inference time of 47.2 ms, making it suitable for real-time use in mobile and cloud applications.
+
+<img width="428" alt="Screenshot 2025-05-05 at 2 24 24 PM" src="https://github.com/user-attachments/assets/6630b9c7-0263-4205-8f4a-603af8390deb" />
+
+The confusion matrix illustrates the model's performance. It shows the True Positives (TP), True Negatives (TN), False Positives (FP), and False Negatives (FN), which are important for evaluating the model's ability to correctly classify diseased and healthy plant leaves.
+
+<img width="498" alt="Screenshot 2025-05-05 at 2 25 02 PM" src="https://github.com/user-attachments/assets/b63d7d1c-3965-4a76-85c5-4f34c2bb192b" />
+
+This graph shows the model's performance over different epochs, displaying the accuracy and time taken for each iteration. It helps visualize the model’s learning progress and overall efficiency during training.
+
 
 # Limitations and Future Work
 * Generalization: The model performs well on images from the PlantVillage dataset but may struggle with real-world images that differ in lighting, background, or leaf orientation. Future improvements could include training with field images.

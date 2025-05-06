@@ -30,7 +30,7 @@ The model used in this project is a **ResNet9** architecture, a smaller and more
 
 <img width="386" alt="Screenshot 2025-05-05 at 2 20 14 PM" src="https://github.com/user-attachments/assets/02f97240-5ea3-4ed2-b2b5-7e6a754d4733" />
 
-This figure illustrates how the code classifies plant leaf images into different disease patterns. It shows how the convolutional layers detect specific features such as color changes and lesions on the leaf, which are essential for distinguishing between healthy and diseased plants.
+This image illustrates how the code classifies plant leaf images into different disease patterns. It shows how the convolutional layers detect specific features such as color changes and lesions on the leaf, which are essential for distinguishing between healthy and diseased plants.
 
 ### Code Details:
 ```python
